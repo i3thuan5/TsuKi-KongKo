@@ -9,8 +9,8 @@ services:
     volumes:
       - "./html:/usr/share/nginx/html/:ro"
     environment:
-       VIRTUAL_HOST: "twcc.ithuan.tw"
-       LETSENCRYPT_HOST: "twcc.ithuan.tw"
+       VIRTUAL_HOST: "tsiamsi.ithuan.tw"
+       LETSENCRYPT_HOST: "tsiamsi.ithuan.tw"
        LETSENCRYPT_EMAIL: "ithuan@ithuan.tw"
     restart: always
 
