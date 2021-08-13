@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+  nginx:
+    image: nginx:1-alpine
+    networks:
+      - default
+      - nginx-bridge
+    volumes:
+      - "./html:/usr/share/nginx/html/:ro"
+    environment:
+       VIRTUAL_HOST: "twcc.ithuan.tw"
+       LETSENCRYPT_HOST: "twcc.ithuan.tw"
+       LETSENCRYPT_EMAIL: "ithuan@ithuan.tw"
+    restart: always
+
+networks:
+  nginx-bridge:
+    external: true
